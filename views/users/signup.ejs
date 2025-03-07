@@ -14,13 +14,15 @@
     />
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/flash.css" />
+
   </head>
   <body>
     <div id="login">
       <div class="login-detail">
         <h1 class="notes-head">Signup</h1>
       </div>
-      <div class="flash-container"><%- include("../includes/flash.ejs") %></div>
+    <%- include("../includes/flash.ejs") %>
       <div class="notes-form">
         <form
           action="/signup"
@@ -84,5 +86,6 @@
         </form>
       </div>
     </div>
+    <script src="js/flash.js"></script>
   </body>
 </html>

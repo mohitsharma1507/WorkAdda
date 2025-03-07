@@ -49,7 +49,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon" ><i class="fa-solid fa-bars" style="color: #ecf0f1 !important;"></i></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -62,14 +62,33 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
+            <% if (currUser.role === "noteprovider") {
+              %>
+            <li class="nav-item dropdown">
               <a
-                class="nav-link active nav-head"
-                aria-current="page"
-                href="/Notes"
-                >Add Notes</a
+                class="nav-link dropdown-toggle nav-head"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Add Notes
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item nav-head" href="/Program/new"
+                    >Create Program Notes
+                    </a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-head" href="/Subject/new"
+                    >Create Student Notes</a
+                  >
+                </li>
+              </ul>
             </li>
+            <% } %>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle nav-head"
@@ -96,17 +115,7 @@
           </ul>
           <div class="d-flex">
             <ul class="navbar-nav">
-              <% if (currUser) { %> <% if (currUser.role === "noteprovider") {
-              %>
-              <li class="nav-item">
-                <a class="nav-link" href="/Program/new"
-                  >Create Program Notes
-                </a>
-                <a class="nav-link" href="/Subject/new"
-                  >Create Student Notes
-                </a>
-              </li>
-              <% } %>
+              <% if (currUser) { %> 
               <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
               </li>

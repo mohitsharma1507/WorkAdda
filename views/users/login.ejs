@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/flash.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -19,11 +19,8 @@
             <h1 class="notes-head">Welcome Back To NoteAdda</h1>
             <p class="notes-details">Enter your credentials to login</p>
         </div>
-        
-        <!-- Flash messages moved inside the login box -->
-        <div class="flash-container">
-            <%- include("../includes/flash.ejs") %>
-        </div>
+    
+        <%- include("../includes/flash.ejs") %>
         
         <div class="notes-form">
             <form action="/login" method="POST" class="needs-validation" novalidate>
@@ -40,5 +37,6 @@
             </form>
         </div>
     </div>
+    <script src="js/flash.js"></script>
 </body>
 </html>

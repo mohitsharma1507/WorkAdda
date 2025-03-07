@@ -28,6 +28,7 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/flash.css" />
   </head>
 
   <body>
@@ -62,7 +63,7 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" ><i class="fa-solid fa-bars" style="color: #ecf0f1 !important;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -105,6 +106,8 @@
             </div>
           </div>
         </nav>
+        <%- include("../includes/flash.ejs") %>
+
         <!-- Hero Page -->
         <div id="center">
           <div id="left">
@@ -261,5 +264,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/flash.js"></script>
   </body>
 </html>
